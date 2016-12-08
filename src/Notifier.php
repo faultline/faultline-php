@@ -41,7 +41,7 @@ class Notifier
         $context = [
             'notifier' => [
                 'name' => 'faultilne-php',
-                'version' => '0.0.1',
+                'version' => Faultline::version(),
                 'url' => 'https://github.com/k1low/faultline-php',
             ],
             'os' => php_uname(),
