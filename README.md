@@ -1,4 +1,4 @@
-# faultline-php
+# faultline-php [![Travis](https://img.shields.io/travis/k1LoW/faultline-php.svg)](https://travis-ci.org/k1LoW/faultline-php)
 
 > [faultline](https://github.com/k1LoW/faultline) exception and error notifier for PHP.
 
