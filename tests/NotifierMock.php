@@ -15,7 +15,6 @@ class NotifierMock extends Notifier
     ];
 
     public $url;
-    public $data;
     public $notice;
 
     public function postNotice($url, $notice)
