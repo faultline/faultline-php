@@ -35,6 +35,9 @@ $notifier = new Faultline\Notifier([
     ]
 ]);
 
+// Set global notifier instance.
+Faultline\Instance::set($notifier);
+
 // Register error and exception handlers.
 $handler = new Faultline\ErrorHandler($notifier);
 $handler->register();
