@@ -19,7 +19,7 @@ $notifier = new Faultline\Notifier([
     'notifications' => [
         [
             'type'=> 'slack',
-            'endpoint'=> 'https://hooks.slack.com/services/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',
+            'endpoint'=> 'https://hooks.slack.com/services/XXXXXXXXXX/B2RAD9423/WC2uTs3MyGldZvieAtAA7gQq',
             'channel'=> '#random',
             'username'=> 'faultline-notify',
             'notifyInterval'=> 5,
