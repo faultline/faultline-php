@@ -11,4 +11,5 @@ $ composer require k1low/faultline
 ## References
 
 - [airbrake/phpbrake](https://github.com/airbrake/phpbrake)
+    - PHPBrake is licensed under [The MIT License (MIT)](https://github.com/airbrake/phpbrake/LICENSE).
 

@@ -11,7 +11,7 @@ class NotifierMock extends Notifier
 {
     public $resp = [
         'headers' => 'HTTP/1.1 201 Created',
-        'data' => '{"id":"12345"}',
+        'data' => '{"status":"success", "errors": 1}',
     ];
 
     public $url;
