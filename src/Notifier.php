@@ -38,14 +38,14 @@ class Notifier extends \Airbrake\Notifier
         if (!empty($this->opt['notifications'])) {
             $notice['notifications'] = $this->opt['notifications'];
         }
-        
+
         foreach ($notice['errors'] as $key => $error) {
             $notice['errors'][$key]['type'] = strtolower(str_replace('Airbrake\\Errors\\', '', $error['type']));
         }
 
         return $notice;
     }
-    
+
     /**
      * sendNotice
      *
@@ -74,5 +74,4 @@ class Notifier extends \Airbrake\Notifier
         ]);
         return $response->getStatusCode() === 201;
     }
-   
 }
