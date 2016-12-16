@@ -62,15 +62,14 @@ class Notifier extends \Airbrake\Notifier
      */
     protected function postNotice($url, $notice)
     {
-        $client = new Client([
-            'timeout'  => 5.0,
-        ]);
-        $response = $client->request('POST', $url, [
+        $client = new Client();
+        $response = $client->post($url, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'x-api-key' => $this->opt['apiKey']
             ],
-            'json' => $notice
+            'json' => $notice,
+            'timeout'  => 5.0,
         ]);
         return $response->getStatusCode() === 201;
     }
