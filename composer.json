@@ -1,5 +1,5 @@
 {
-    "name": "k1low/faultline",
+    "name": "faultline/faultline",
     "description": "faultline exception and error notifier for PHP",
     "keywords": ["notifier", "exception", "error"],
     "license": "MIT",
