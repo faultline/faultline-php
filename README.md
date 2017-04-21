@@ -1,11 +1,11 @@
-# faultline-php [![Travis](https://img.shields.io/travis/k1LoW/faultline-php.svg)](https://travis-ci.org/k1LoW/faultline-php)
+# faultline-php [![Travis](https://img.shields.io/travis/faultline/faultline-php.svg)](https://travis-ci.org/faultline/faultline-php)
 
-> [faultline](https://github.com/k1LoW/faultline) exception and error notifier for PHP.
+> [faultline](https://github.com/faultline/faultline) exception and error notifier for PHP.
 
 ## Installation
 
 ```sh
-$ composer require k1low/faultline
+$ composer require faultline/faultline
 ```
 
 ## Usage
