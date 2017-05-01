@@ -13,7 +13,7 @@ $ composer require faultline/faultline
 ```php
 // Create new Notifier instance.
 $notifier = new Faultline\Notifier([
-    'project' => 'faultline-test',
+    'project' => 'faultline-php',
     'apiKey' => 'xxxxXXXXXxXxXXxxXXXXXXXxxxxXXXXXX',
     'endpoint' => 'https://xxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/v0',
     'notifications' => [
@@ -23,14 +23,21 @@ $notifier = new Faultline\Notifier([
             'channel'=> '#random',
             'username'=> 'faultline-notify',
             'notifyInterval'=> 5,
-            'threshold'=> 10
+            'threshold'=> 10,
+            'timezone'=> 'Asia/Tokyo'
         ],
         [
             'type'=> 'github',
             'userToken'=> 'XXXXXXXxxxxXXXXXXxxxxxXXXXXXXXXX',
             'owner'=> 'k1LoW',
             'repo'=> 'faultline',
-            'threshold'=> -1
+            'labels'=> [
+                'faultline', 'bug'
+            ],
+            'if_exist'=> 'reopen-and-comment',
+            'notifyInterval'=> 1,
+            'threshold'=> 1,
+            'timezone'=> 'Asia/Tokyo'
         ]
     ]
 ]);
