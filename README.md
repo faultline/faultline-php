@@ -51,7 +51,7 @@ $handler->register();
 
 // Somewhere in the app...
 try {
-    throw new Exception('hello from phpbrake');
+    throw new Exception('hello from faultline-php');
 } catch(Exception $e) {
     Faultline\Instance::notify($e);
 }
