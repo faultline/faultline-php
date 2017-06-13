@@ -2,10 +2,7 @@
 
 namespace Faultline\Tests;
 
-/**
- * from Airbrake\Tests\Troublemaker
- */
-class Troublemaker
+class Troublemaker // from Airbrake\Tests\Troublemaker
 {
     private static function doEchoUndefinedVar()
     {
@@ -25,5 +22,15 @@ class Troublemaker
     public static function newException()
     {
         return self::doNewException();
+    }
+
+    private static function doLogAddError($log)
+    {
+        $log->addError('charge failed', ['client_id' => 123]);
+    }
+
+    public static function logAddError($log)
+    {
+        self::doLogAddError($log);
     }
 }
