@@ -57,6 +57,14 @@ try {
 }
 ```
 
+## Monolog integration
+
+```php
+$log = new Monolog\Logger('acl');
+$log->pushHandler(new Faultline\MonologHandler($notifier));
+
+$log->addError('permission denied', ['user_id' => 123]);
+```
 
 ## References
 
