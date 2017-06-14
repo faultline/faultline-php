@@ -2,11 +2,11 @@
 
 namespace Faultline\Tests;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Faultline\Notifier;
 use Faultline\ErrorHandler;
 
-class ErrorHandlerTest extends PHPUnit_Framework_TestCase
+class ErrorHandlerTest extends TestCase
 {
     /**
      * testError

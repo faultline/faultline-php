@@ -2,9 +2,9 @@
 
 namespace Faultline\Tests;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class MonologHandlerTest extends PHPUnit_Framework_TestCase
+class MonologHandlerTest extends TestCase
 {
     public function setUp()
     {
