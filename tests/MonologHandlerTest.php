@@ -53,13 +53,13 @@ class MonologHandlerTest extends TestCase
     {
         $backtrace = $this->notifier->notice['errors'][0]['backtrace'];
         $wanted = [[
-          'file' => dirname(__FILE__).'/Troublemaker.php',
-          'line' => 29,
-          'function' => 'Faultline\Tests\Troublemaker::doLogAddError',
+            'file' => dirname(__FILE__).'/Troublemaker.php',
+            'line' => 29,
+            'function' => 'Faultline\Tests\Troublemaker::doLogAddError',
         ], [
-          'file' => dirname(__FILE__).'/Troublemaker.php',
-          'line' => 34,
-          'function' => 'Faultline\Tests\Troublemaker::logAddError',
+            'file' => dirname(__FILE__).'/Troublemaker.php',
+            'line' => 34,
+            'function' => 'Faultline\Tests\Troublemaker::logAddError',
         ]];
         for ($i = 0; $i < count($wanted); $i++) {
             $this->assertEquals($wanted[$i], $backtrace[$i]);
@@ -74,5 +74,25 @@ class MonologHandlerTest extends TestCase
                 'client_id' => 123,
             ],
         ], $params);
+    }
+
+    public function testNotifications()
+    {
+        $notifications = $this->notifier->notice['notifications'];
+        $this->assertEquals([[
+            'type'=> 'slack',
+            'endpoint'=> 'https://hooks.slack.com/services/XXXXXXXXXX/B2RAD9423/WC2uTs3MyGldZvieAtAA7gQq',
+            'channel'=> '#random',
+            'username'=> 'faultline-notify',
+            'notifyInterval'=> 5,
+            'threshold'=> 10
+        ], [
+
+            'type'=> 'github',
+            'userToken'=> 'XXXXXXXxxxxXXXXXXxxxxxXXXXXXXXXX',
+            'owner'=> 'k1LoW',
+            'repo'=> 'faultline',
+            'threshold'=> -1
+        ]], $notifications);
     }
 }
