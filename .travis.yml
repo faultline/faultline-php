@@ -13,5 +13,5 @@ install:
   - composer install
 
 script:
-  - phpunit
+  - vendor/bin/phpunit
   - vendor/bin/phpcs -n -p --encoding=utf-8 --standard=PSR2 --extensions=php ./src/ ./tests/
