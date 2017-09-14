@@ -63,15 +63,21 @@ class Notifier extends \Airbrake\Notifier
     protected function postNotice($url, $notice)
     {
         $client = new Client();
-        $response = $client->post($url, [
+        $config = [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'x-api-key' => $this->opt['apiKey']
             ],
             'json' => $notice,
-            'http_erros' => false,
             'timeout'  => 5.0,
-        ]);
+        ];
+        if (preg_match('/^5/', \GuzzleHttp\Client::VERSION)) {
+            $config['exceptions'] = false;
+        } else {
+            $config['http_errors'] = false;
+        }
+        $response = $client->post($url, $config);
+
         return $response->getStatusCode() === 201;
     }
 }
