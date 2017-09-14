@@ -69,8 +69,7 @@ class Notifier extends \Airbrake\Notifier
                 'x-api-key' => $this->opt['apiKey']
             ],
             'json' => $notice,
-            'http_erros' => false, // Guzzle6
-            'exceptions' => false, // Guzzle5
+            'http_erros' => false,
             'timeout'  => 5.0,
         ]);
         return $response->getStatusCode() === 201;
