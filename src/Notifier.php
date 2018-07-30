@@ -69,7 +69,7 @@ class Notifier extends \Airbrake\Notifier
                 'x-api-key' => $this->opt['apiKey']
             ],
             'json' => $notice,
-            'timeout'  => 5.0,
+            'timeout'  => (isset($this->opt['timeout']) ? $this->opt['timeout'] : 5.0),
         ];
         if (preg_match('/^5/', \GuzzleHttp\Client::VERSION)) {
             $config['exceptions'] = false;

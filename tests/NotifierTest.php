@@ -17,6 +17,7 @@ class NotifierTest extends TestCase
             'project' => 'faultline-test',
             'apiKey' => 'xxxxXXXXXxXxXXxxXXXXXXXxxxxXXXXXX',
             'endpoint' => 'https://xxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/v0',
+            'timeout' => '30.0',
             'notifications' => [
                 [
                     'type'=> 'slack',
@@ -49,6 +50,7 @@ class NotifierTest extends TestCase
             'project' => 'faultline-test',
             'apiKey' => 'xxxxXXXXXxXxXXxxXXXXXXXxxxxXXXXXX',
             'endpoint' => 'https://example.com/v0',
+            'timeout' => '30.0',
             'notifications' => [
                 [
                     'type'=> 'slack',
