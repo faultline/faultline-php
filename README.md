@@ -16,6 +16,7 @@ $notifier = new Faultline\Notifier([
     'project' => 'faultline-php',
     'apiKey' => 'xxxxXXXXXxXxXXxxXXXXXXXxxxxXXXXXX',
     'endpoint' => 'https://xxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/v0',
+    'timeout' => '30.0',
     'notifications' => [
         [
             'type'=> 'slack',
